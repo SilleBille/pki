@@ -1,6 +1,13 @@
 sudo: required
 language: python
 
+notifications:
+    webhooks: https://www.travisbuddy.com/
+
+travisBuddy:
+  regex: "^(https:\\/\\/transfer\\.sh\\/.*\\/.*)"
+  regexOptions: "gm"
+
 services:
   - docker
 cache: pip
