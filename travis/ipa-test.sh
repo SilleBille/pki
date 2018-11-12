@@ -83,4 +83,6 @@ ${cert_test_file_loc}
 # Uninstall ipa-server
 ipa-server-install --uninstall -U
 
+exit 2
+
 trap "exit_handler" EXIT
