@@ -39,6 +39,8 @@ exit_handler() {
 
     chown ${BUILDUSER_UID}:${BUILDUSER_GID} /tmp/${LOGS_TAR_NAME}
     curl -k -w "\n" --upload /tmp/${LOGS_TAR_NAME} https://transfer.sh/${LOGS_TAR_NAME} >> ${BUILDDIR}/pki/logs.txt
+    
+    exit 2
 }
 
 
