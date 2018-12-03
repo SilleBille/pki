@@ -9,10 +9,6 @@ notifications:
     webhooks: https://www.travisbuddy.com/?insertMode=update
 on_success: never
 
-travisBuddy:
-    regex: "^(https:\\/\\/transfer\\.sh\\/.*\\/.*)"
-regexOptions: "gm"
-
 env:
   matrix:
     - BASE_IMAGE_VERSION=28 TASK="PKI"
