@@ -5,11 +5,20 @@ services:
   - docker
 cache: pip
 
+notifications:
+    webhooks: https://www.travisbuddy.com/?insertMode=update
+on_success: never
+
+travisBuddy:
+    regex: "^(https:\\/\\/transfer\\.sh\\/.*\\/.*)"
+regexOptions: "gm"
+
 env:
-  - BASE_IMAGE_VERSION=28 TASK="PKI"
-  - BASE_IMAGE_VERSION=28 TASK="IPA"
-  - BASE_IMAGE_VERSION=29 TASK="PKI"
-  - BASE_IMAGE_VERSION=29 TASK="IPA"
+  matrix:
+    - BASE_IMAGE_VERSION=28 TASK="PKI"
+    - BASE_IMAGE_VERSION=28 TASK="IPA"
+    - BASE_IMAGE_VERSION=29 TASK="PKI"
+    - BASE_IMAGE_VERSION=29 TASK="IPA"
 
 before_install:
   - set -a && source travis/global_variables
