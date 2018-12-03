@@ -51,6 +51,8 @@ sysctl net.ipv6.conf.lo.disable_ipv6=0
 # Define constants
 server_password="Secret.123"
 
+exit 2
+
 # Install IPA-server
 echo "Installing IPA ..."
 ipa-server-install -U --domain pki.test --realm PKI.TEST -p ${server_password} -a ${server_password} --setup-dns --setup-kra --auto-forwarders
