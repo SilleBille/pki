@@ -64,8 +64,8 @@
 
 Name:             pki-core
 %if 0%{?rhel}
-Version:                10.5.9
-%define redhat_release  13
+Version:                10.5.14
+%define redhat_release  2
 %define redhat_stage    0
 %define default_release %{redhat_release}.%{redhat_stage}
 #%define default_release %{redhat_release}
@@ -91,6 +91,7 @@ BuildRoot:        %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:    cmake >= 2.8.9-1
 BuildRequires:    gcc-c++
+BuildRequires:    git
 BuildRequires:    zip
 BuildRequires:    java-1.8.0-openjdk-devel
 BuildRequires:    redhat-rpm-config
