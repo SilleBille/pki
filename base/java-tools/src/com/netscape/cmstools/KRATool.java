@@ -535,134 +535,134 @@ public class KRATool {
     private static final String KRATOOL_CFG_FILE = "-kratool_config_file";
 
     private static final String KRATOOL_CFG_DESCRIPTION = " <complete path to the kratool config file"
-                            + NEWLINE
-                            + "        "
-                            + "  ending with the kratool config file name>";
+            + NEWLINE
+            + "        "
+            + "  ending with the kratool config file name>";
 
     private static final String KRATOOL_CFG_FILE_EXAMPLE = KRATOOL_CFG_FILE
-                             + " "
-                             + "/usr/share/pki/java-tools/KRATool.cfg";
+            + " "
+            + "/usr/share/pki/java-tools/KRATool.cfg";
 
     private static final String SOURCE_LDIF_FILE = "-source_ldif_file";
 
     private static final String SOURCE_LDIF_DESCRIPTION = " <complete path to the source LDIF input file"
-                            + NEWLINE
-                            + "        "
-                            + "  ending with the source LDIF file name>";
+            + NEWLINE
+            + "        "
+            + "  ending with the source LDIF file name>";
 
     private static final String SOURCE_LDIF_FILE_EXAMPLE = SOURCE_LDIF_FILE
-                             + " "
-                             + "/export/pki/source.ldif";
+            + " "
+            + "/export/pki/source.ldif";
 
     private static final String TARGET_LDIF_FILE = "-target_ldif_file";
 
     private static final String TARGET_LDIF_DESCRIPTION = " <complete path to the target LDIF output file"
-                            + NEWLINE
-                            + "        "
-                            + "  ending with the target LDIF file name>";
+            + NEWLINE
+            + "        "
+            + "  ending with the target LDIF file name>";
 
     private static final String TARGET_LDIF_FILE_EXAMPLE = TARGET_LDIF_FILE
-                             + " "
-                             + "/export/pki/target.ldif";
+            + " "
+            + "/export/pki/target.ldif";
 
     private static final String LOG_FILE = "-log_file";
 
     private static final String LOG_DESCRIPTION = " <complete path to the log file"
-                    + NEWLINE
-                    + "        "
-                    + "  ending with the log file name>";
+            + NEWLINE
+            + "        "
+            + "  ending with the log file name>";
 
     private static final String LOG_FILE_EXAMPLE = LOG_FILE
-                     + " "
-                     + "/export/pki/KRATool.log";
+            + " "
+            + "/export/pki/KRATool.log";
 
     // Constants:  Command-line Options (Rewrap)
     private static final String SOURCE_NSS_DB_PATH = "-source_pki_security_database_path";
 
     private static final String SOURCE_NSS_DB_DESCRIPTION = "  <complete path to the "
-                              + "source security databases"
-                              + NEWLINE
-                              + "        "
-                              + "   used by data in the source LDIF file>";
+            + "source security databases"
+            + NEWLINE
+            + "        "
+            + "   used by data in the source LDIF file>";
 
     private static final String SOURCE_NSS_DB_PATH_EXAMPLE = SOURCE_NSS_DB_PATH
-                               + " "
-                               + "/export/pki";
+            + " "
+            + "/export/pki";
 
     private static final String SOURCE_STORAGE_TOKEN_NAME = "-source_storage_token_name";
 
     private static final String SOURCE_STORAGE_TOKEN_DESCRIPTION = "  <name of the token containing "
-                                     + "the source storage token>";
+            + "the source storage token>";
 
     private static final String SOURCE_STORAGE_TOKEN_NAME_EXAMPLE = SOURCE_STORAGE_TOKEN_NAME
-                                      + " "
-                                      + TIC
-                                      + CryptoUtil.INTERNAL_TOKEN_FULL_NAME
-                                      + TIC;
+            + " "
+            + TIC
+            + CryptoUtil.INTERNAL_TOKEN_FULL_NAME
+            + TIC;
 
     private static final String SOURCE_STORAGE_CERT_NICKNAME = "-source_storage_certificate_nickname";
 
     private static final String SOURCE_STORAGE_CERT_NICKNAME_DESCRIPTION = "  <nickname of the source "
-                                             + "storage certificate>";
+            + "storage certificate>";
 
     private static final String SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE = SOURCE_STORAGE_CERT_NICKNAME
-                                         + " "
-                                         + TIC
-                                         + "storageCert cert-pki-kra"
-                                         + TIC;
+            + " "
+            + TIC
+            + "storageCert cert-pki-kra"
+            + TIC;
 
     private static final String TARGET_STORAGE_CERTIFICATE_FILE = "-target_storage_certificate_file";
 
     private static final String TARGET_STORAGE_CERTIFICATE_DESCRIPTION = "  <complete path to the target "
-                                           + "storage certificate file"
-                                           + NEWLINE
-                                           + "        "
-                                           + "   ending with the target "
-                                           + "storage certificate file name;"
-                                           + NEWLINE
-                                           + "        "
-                                           + "   the target storage "
-                                           + "certificate is stored in"
-                                           + NEWLINE
-                                           + "        "
-                                           + "   an ASCII format between a "
-                                           + "header and footer>";
+            + "storage certificate file"
+            + NEWLINE
+            + "        "
+            + "   ending with the target "
+            + "storage certificate file name;"
+            + NEWLINE
+            + "        "
+            + "   the target storage "
+            + "certificate is stored in"
+            + NEWLINE
+            + "        "
+            + "   an ASCII format between a "
+            + "header and footer>";
 
     private static final String TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE = TARGET_STORAGE_CERTIFICATE_FILE
-                                            + " "
-                                            + "/export/pki/target_storage.cert";
+            + " "
+            + "/export/pki/target_storage.cert";
 
     private static final String SOURCE_NSS_DB_PWDFILE = "-source_pki_security_database_pwdfile";
 
     private static final String SOURCE_NSS_DB_PWDFILE_DESCRIPTION = "  <complete path to the password "
-                                      + "file which ONLY contains the"
-                                      + NEWLINE
-                                      + "        "
-                                      + "   password used to access the "
-                                      + "source security databases>";
+            + "file which ONLY contains the"
+            + NEWLINE
+            + "        "
+            + "   password used to access the "
+            + "source security databases>";
 
     private static final String SOURCE_NSS_DB_PWDFILE_EXAMPLE = SOURCE_NSS_DB_PWDFILE
-                                  + " "
-                                  + "/export/pki/pwdfile";
+            + " "
+            + "/export/pki/pwdfile";
 
     // Constants:  Command-line Options (ID Offset)
     private static final String APPEND_ID_OFFSET = "-append_id_offset";
 
     private static final String APPEND_ID_OFFSET_DESCRIPTION = "  <ID offset that is appended to "
-                                 + "each record's source ID>";
+            + "each record's source ID>";
 
     private static final String APPEND_ID_OFFSET_EXAMPLE = APPEND_ID_OFFSET
-                             + " "
-                             + "100000000000";
+            + " "
+            + "100000000000";
 
     private static final String REMOVE_ID_OFFSET = "-remove_id_offset";
 
     private static final String REMOVE_ID_OFFSET_DESCRIPTION = "  <ID offset that is removed from "
-                                 + "each record's source ID>";
+            + "each record's source ID>";
 
     private static final String REMOVE_ID_OFFSET_EXAMPLE = REMOVE_ID_OFFSET
-                             + " "
-                             + "100000000000";
+            + " "
+            + "100000000000";
 
     // Constants:  Command-line Options
     private static final String SOURCE_KRA_NAMING_CONTEXT = "-source_kra_naming_context";
@@ -670,23 +670,26 @@ public class KRATool {
     private static final String SOURCE_KRA_NAMING_CONTEXT_DESCRIPTION = "  <source KRA naming context>";
 
     private static final String SOURCE_KRA_NAMING_CONTEXT_EXAMPLE = SOURCE_KRA_NAMING_CONTEXT
-                                      + " "
-                                      + TIC
-                                      + "alpha.example.com-pki-kra"
-                                      + TIC;
+            + " "
+            + TIC
+            + "alpha.example.com-pki-kra"
+            + TIC;
 
     private static final String TARGET_KRA_NAMING_CONTEXT = "-target_kra_naming_context";
 
     private static final String TARGET_KRA_NAMING_CONTEXT_DESCRIPTION = "  <target KRA naming context>";
 
     private static final String TARGET_KRA_NAMING_CONTEXT_EXAMPLE = TARGET_KRA_NAMING_CONTEXT
-                                      + " "
-                                      + TIC
-                                      + "omega.example.com-pki-kra"
-                                      + TIC;
+            + " "
+            + TIC
+            + "omega.example.com-pki-kra"
+            + TIC;
 
-    private static final String PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY =
-            "-process_requests_and_key_records_only";
+    private static final String KEY_UNWRAP_ALGORITHM = "-unwrap_algorithm";
+
+    private static final String KEY_UNWRAP_ALGORITHM_DESCRIPTION = "  <key unwrap algorithm> (default: DES3)";
+
+    private static final String PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY = "-process_requests_and_key_records_only";
 
     // Constants:  KRATOOL Config File
     private static final String KRATOOL_CFG_PREFIX = "kratool.ldif";
@@ -698,163 +701,163 @@ public class KRATool {
 
     // Constants:  KRATOOL Config File (KRA CA Enrollment Request Fields)
     private static final String KRATOOL_CFG_ENROLLMENT_CN = KRATOOL_CFG_PREFIX
-                                  + DOT
-                                  + KRATOOL_CFG_ENROLLMENT
-                                  + DOT
-                                  + "cn";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "cn";
     private static final String KRATOOL_CFG_ENROLLMENT_DATE_OF_MODIFY = KRATOOL_CFG_PREFIX
-                                              + DOT
-                                              + KRATOOL_CFG_ENROLLMENT
-                                              + DOT
-                                              + "dateOfModify";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "dateOfModify";
     private static final String KRATOOL_CFG_ENROLLMENT_DN = KRATOOL_CFG_PREFIX
-                                  + DOT
-                                  + KRATOOL_CFG_ENROLLMENT
-                                  + DOT
-                                  + "dn";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "dn";
     private static final String KRATOOL_CFG_ENROLLMENT_EXTDATA_KEY_RECORD = KRATOOL_CFG_PREFIX
-                                                  + DOT
-                                                  + KRATOOL_CFG_ENROLLMENT
-                                                  + DOT
-                                                  + "extdata.keyRecord";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "extdata.keyRecord";
     private static final String KRATOOL_CFG_ENROLLMENT_EXTDATA_REQUEST_NOTES = KRATOOL_CFG_PREFIX
-                                                     + DOT
-                                                     + KRATOOL_CFG_ENROLLMENT
-                                                     + DOT
-                                                     + "extdata.requestNotes";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "extdata.requestNotes";
     private static final String KRATOOL_CFG_ENROLLMENT_REQUEST_ID = KRATOOL_CFG_PREFIX
-                                          + DOT
-                                          + KRATOOL_CFG_ENROLLMENT
-                                          + DOT
-                                          + "requestId";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "requestId";
 
     // Constants:  KRATOOL Config File (KRA CA Key Record Fields)
     private static final String KRATOOL_CFG_CA_KEY_RECORD_CN = KRATOOL_CFG_PREFIX
-                                     + DOT
-                                     + KRATOOL_CFG_CA_KEY_RECORD
-                                     + DOT
-                                     + "cn";
+            + DOT
+            + KRATOOL_CFG_CA_KEY_RECORD
+            + DOT
+            + "cn";
     private static final String KRATOOL_CFG_CA_KEY_RECORD_DATE_OF_MODIFY = KRATOOL_CFG_PREFIX
-                                                 + DOT
-                                                 + KRATOOL_CFG_CA_KEY_RECORD
-                                                 + DOT
-                                                 + "dateOfModify";
+            + DOT
+            + KRATOOL_CFG_CA_KEY_RECORD
+            + DOT
+            + "dateOfModify";
     private static final String KRATOOL_CFG_CA_KEY_RECORD_DN = KRATOOL_CFG_PREFIX
-                                     + DOT
-                                     + KRATOOL_CFG_ENROLLMENT
-                                     + DOT
-                                     + "dn";
+            + DOT
+            + KRATOOL_CFG_ENROLLMENT
+            + DOT
+            + "dn";
     private static final String KRATOOL_CFG_CA_KEY_RECORD_PRIVATE_KEY_DATA = KRATOOL_CFG_PREFIX
-                                                   + DOT
-                                                   + KRATOOL_CFG_CA_KEY_RECORD
-                                                   + DOT
-                                                   + "privateKeyData";
+            + DOT
+            + KRATOOL_CFG_CA_KEY_RECORD
+            + DOT
+            + "privateKeyData";
     private static final String KRATOOL_CFG_CA_KEY_RECORD_SERIAL_NO = KRATOOL_CFG_PREFIX
-                                            + DOT
-                                            + KRATOOL_CFG_CA_KEY_RECORD
-                                            + DOT
-                                            + "serialno";
+            + DOT
+            + KRATOOL_CFG_CA_KEY_RECORD
+            + DOT
+            + "serialno";
 
     // Constants:  KRATOOL Config File (KRA CA / TPS Recovery Request Fields)
     private static final String KRATOOL_CFG_RECOVERY_CN = KRATOOL_CFG_PREFIX
-                                + DOT
-                                + KRATOOL_CFG_RECOVERY
-                                + DOT
-                                + "cn";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "cn";
     private static final String KRATOOL_CFG_RECOVERY_DATE_OF_MODIFY = KRATOOL_CFG_PREFIX
-                                            + DOT
-                                            + KRATOOL_CFG_RECOVERY
-                                            + DOT
-                                            + "dateOfModify";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "dateOfModify";
     private static final String KRATOOL_CFG_RECOVERY_DN = KRATOOL_CFG_PREFIX
-                                + DOT
-                                + KRATOOL_CFG_RECOVERY
-                                + DOT
-                                + "dn";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "dn";
     private static final String KRATOOL_CFG_RECOVERY_EXTDATA_REQUEST_ID = KRATOOL_CFG_PREFIX
-                                                + DOT
-                                                + KRATOOL_CFG_RECOVERY
-                                                + DOT
-                                                + "extdata.requestId";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "extdata.requestId";
     private static final String KRATOOL_CFG_RECOVERY_EXTDATA_REQUEST_NOTES = KRATOOL_CFG_PREFIX
-                                                   + DOT
-                                                   + KRATOOL_CFG_RECOVERY
-                                                   + DOT
-                                                   + "extdata.requestNotes";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "extdata.requestNotes";
     private static final String KRATOOL_CFG_RECOVERY_EXTDATA_SERIAL_NUMBER = KRATOOL_CFG_PREFIX
-                                                   + DOT
-                                                   + KRATOOL_CFG_RECOVERY
-                                                   + DOT
-                                                   + "extdata.serialnumber";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "extdata.serialnumber";
     private static final String KRATOOL_CFG_RECOVERY_REQUEST_ID = KRATOOL_CFG_PREFIX
-                                        + DOT
-                                        + KRATOOL_CFG_RECOVERY
-                                        + DOT
-                                        + "requestId";
+            + DOT
+            + KRATOOL_CFG_RECOVERY
+            + DOT
+            + "requestId";
 
     // Constants:  KRATOOL Config File (KRA TPS Key Record Fields)
     private static final String KRATOOL_CFG_TPS_KEY_RECORD_CN = KRATOOL_CFG_PREFIX
-                                      + DOT
-                                      + KRATOOL_CFG_TPS_KEY_RECORD
-                                      + DOT
-                                      + "cn";
+            + DOT
+            + KRATOOL_CFG_TPS_KEY_RECORD
+            + DOT
+            + "cn";
     private static final String KRATOOL_CFG_TPS_KEY_RECORD_DATE_OF_MODIFY = KRATOOL_CFG_PREFIX
-                                                  + DOT
-                                                  + KRATOOL_CFG_TPS_KEY_RECORD
-                                                  + DOT
-                                                  + "dateOfModify";
+            + DOT
+            + KRATOOL_CFG_TPS_KEY_RECORD
+            + DOT
+            + "dateOfModify";
     private static final String KRATOOL_CFG_TPS_KEY_RECORD_DN = KRATOOL_CFG_PREFIX
-                                      + DOT
-                                      + KRATOOL_CFG_TPS_KEY_RECORD
-                                      + DOT
-                                      + "dn";
+            + DOT
+            + KRATOOL_CFG_TPS_KEY_RECORD
+            + DOT
+            + "dn";
     private static final String KRATOOL_CFG_TPS_KEY_RECORD_PRIVATE_KEY_DATA = KRATOOL_CFG_PREFIX
-                                                    + DOT
-                                                    + KRATOOL_CFG_TPS_KEY_RECORD
-                                                    + DOT
-                                                    + "privateKeyData";
+            + DOT
+            + KRATOOL_CFG_TPS_KEY_RECORD
+            + DOT
+            + "privateKeyData";
     private static final String KRATOOL_CFG_TPS_KEY_RECORD_SERIAL_NO = KRATOOL_CFG_PREFIX
-                                             + DOT
-                                             + KRATOOL_CFG_TPS_KEY_RECORD
-                                             + DOT
-                                             + "serialno";
+            + DOT
+            + KRATOOL_CFG_TPS_KEY_RECORD
+            + DOT
+            + "serialno";
 
     // Constants:  KRATOOL Config File (KRA TPS Netkey Keygen Request Fields)
     private static final String KRATOOL_CFG_KEYGEN_CN = KRATOOL_CFG_PREFIX
-                              + DOT
-                              + KRATOOL_CFG_KEYGEN
-                              + DOT
-                              + "cn";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "cn";
     private static final String KRATOOL_CFG_KEYGEN_DATE_OF_MODIFY = KRATOOL_CFG_PREFIX
-                                          + DOT
-                                          + KRATOOL_CFG_KEYGEN
-                                          + DOT
-                                          + "dateOfModify";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "dateOfModify";
     private static final String KRATOOL_CFG_KEYGEN_DN = KRATOOL_CFG_PREFIX
-                              + DOT
-                              + KRATOOL_CFG_KEYGEN
-                              + DOT
-                              + "dn";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "dn";
     private static final String KRATOOL_CFG_KEYGEN_EXTDATA_KEY_RECORD = KRATOOL_CFG_PREFIX
-                                              + DOT
-                                              + KRATOOL_CFG_KEYGEN
-                                              + DOT
-                                              + "extdata.keyRecord";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "extdata.keyRecord";
     private static final String KRATOOL_CFG_KEYGEN_EXTDATA_REQUEST_ID = KRATOOL_CFG_PREFIX
-                                              + DOT
-                                              + KRATOOL_CFG_KEYGEN
-                                              + DOT
-                                              + "extdata.requestId";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "extdata.requestId";
     private static final String KRATOOL_CFG_KEYGEN_EXTDATA_REQUEST_NOTES = KRATOOL_CFG_PREFIX
-                                                 + DOT
-                                                 + KRATOOL_CFG_KEYGEN
-                                                 + DOT
-                                                 + "extdata.requestNotes";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "extdata.requestNotes";
     private static final String KRATOOL_CFG_KEYGEN_REQUEST_ID = KRATOOL_CFG_PREFIX
-                                      + DOT
-                                      + KRATOOL_CFG_KEYGEN
-                                      + DOT
-                                      + "requestId";
+            + DOT
+            + KRATOOL_CFG_KEYGEN
+            + DOT
+            + "requestId";
 
     // Constants:  Target Certificate Information
     private static final String HEADER = "-----BEGIN";
@@ -891,27 +894,21 @@ public class KRATool {
 
     // Constants:  KRA LDIF Record Messages
     private static final String KRA_LDIF_REWRAP_MESSAGE = "REWRAPPED the '"
-                                                         + "existing DES3 "
-                                                         + "symmetric "
-                                                         + "session key"
-                                                         + "' with the '";
+            + "existing "
+            + "symmetric "
+            + "session key"
+            + "' with the '";
     private static final String KRA_LDIF_RSA_MESSAGE = "-bit RSA public key' "
-                                                     + "obtained from the "
-                                                     + "target storage "
-                                                     + "certificate";
-    private static final String KRA_LDIF_USED_PWDFILE_MESSAGE =
-                                    "USED source PKI security database "
-                                            + "password file";
-    private static final String KRA_LDIF_APPENDED_ID_OFFSET_MESSAGE =
-                                    "APPENDED ID offset";
-    private static final String KRA_LDIF_REMOVED_ID_OFFSET_MESSAGE =
-                                    "REMOVED ID offset";
-    private static final String KRA_LDIF_SOURCE_NAME_CONTEXT_MESSAGE =
-                                    "RENAMED source KRA naming context '";
-    private static final String KRA_LDIF_TARGET_NAME_CONTEXT_MESSAGE =
-                                    "' to target KRA naming context '";
-    private static final String KRA_LDIF_PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY_MESSAGE =
-            "PROCESSED requests and key records ONLY!";
+            + "obtained from the "
+            + "target storage "
+            + "certificate";
+    private static final String KRA_LDIF_USED_PWDFILE_MESSAGE = "USED source PKI security database "
+            + "password file";
+    private static final String KRA_LDIF_APPENDED_ID_OFFSET_MESSAGE = "APPENDED ID offset";
+    private static final String KRA_LDIF_REMOVED_ID_OFFSET_MESSAGE = "REMOVED ID offset";
+    private static final String KRA_LDIF_SOURCE_NAME_CONTEXT_MESSAGE = "RENAMED source KRA naming context '";
+    private static final String KRA_LDIF_TARGET_NAME_CONTEXT_MESSAGE = "' to target KRA naming context '";
+    private static final String KRA_LDIF_PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY_MESSAGE = "PROCESSED requests and key records ONLY!";
 
     /*************/
     /* Variables */
@@ -975,6 +972,7 @@ public class KRATool {
     private static PrivateKey mUnwrapPrivateKey = null;
     private static PublicKey mWrapPublicKey = null;
     private static int mPublicKeySize = 0;
+    private static SymmetricKey.Type mKeyUnwrapAlgorithm = null;
 
     // Variables:  KRA LDIF Record Messages
     private static String mSourcePKISecurityDatabasePwdfileMessage = null;
@@ -1008,306 +1006,314 @@ public class KRATool {
      */
     private static void printUsage() {
         System.out.println("Usage:  "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_DESCRIPTION
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_DESCRIPTION
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_DESCRIPTION
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE
-                          + NEWLINE
-                          + "        "
-                          + LOG_DESCRIPTION
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + SOURCE_NSS_DB_PATH
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + SOURCE_STORAGE_TOKEN_NAME
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_TOKEN_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + SOURCE_STORAGE_CERT_NICKNAME
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_CERT_NICKNAME_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + TARGET_STORAGE_CERTIFICATE_FILE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_STORAGE_CERTIFICATE_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + SOURCE_NSS_DB_PWDFILE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PWDFILE_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + APPEND_ID_OFFSET
-                          + NEWLINE
-                          + "        "
-                          + APPEND_ID_OFFSET_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + REMOVE_ID_OFFSET
-                          + NEWLINE
-                          + "        "
-                          + REMOVE_ID_OFFSET_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + SOURCE_KRA_NAMING_CONTEXT
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + TARGET_KRA_NAMING_CONTEXT
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_DESCRIPTION
-                          + "]"
-                          + NEWLINE
-                          + "        "
-                          + "["
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + "]"
-                          + NEWLINE);
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_DESCRIPTION
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_DESCRIPTION
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_DESCRIPTION
+                + NEWLINE
+                + "        "
+                + LOG_FILE
+                + NEWLINE
+                + "        "
+                + LOG_DESCRIPTION
+                + NEWLINE
+                + "        "
+                + "["
+                + SOURCE_NSS_DB_PATH
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + SOURCE_STORAGE_TOKEN_NAME
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_TOKEN_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + SOURCE_STORAGE_CERT_NICKNAME
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_CERT_NICKNAME_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + TARGET_STORAGE_CERTIFICATE_FILE
+                + NEWLINE
+                + "        "
+                + TARGET_STORAGE_CERTIFICATE_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + SOURCE_NSS_DB_PWDFILE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PWDFILE_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + APPEND_ID_OFFSET
+                + NEWLINE
+                + "        "
+                + APPEND_ID_OFFSET_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + REMOVE_ID_OFFSET
+                + NEWLINE
+                + "        "
+                + REMOVE_ID_OFFSET_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + SOURCE_KRA_NAMING_CONTEXT
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + TARGET_KRA_NAMING_CONTEXT
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + KEY_UNWRAP_ALGORITHM
+                + NEWLINE
+                + "        "
+                + KEY_UNWRAP_ALGORITHM_DESCRIPTION
+                + "]"
+                + NEWLINE
+                + "        "
+                + "["
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + "]"
+                + NEWLINE);
 
         System.out.println("Example of 'Rewrap and Append ID Offset':"
-                          + NEWLINE
-                          + NEWLINE
-                          + "        "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PATH_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PWDFILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + APPEND_ID_OFFSET_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + NEWLINE);
+                + NEWLINE
+                + NEWLINE
+                + "        "
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + LOG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PATH_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PWDFILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + APPEND_ID_OFFSET_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + NEWLINE);
 
         System.out.println("Example of 'Rewrap and Remove ID Offset':"
-                          + NEWLINE
-                          + NEWLINE
-                          + "        "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PATH_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PWDFILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + REMOVE_ID_OFFSET_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + NEWLINE);
+                + NEWLINE
+                + NEWLINE
+                + "        "
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + LOG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PATH_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PWDFILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + REMOVE_ID_OFFSET_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + NEWLINE);
 
         System.out.println("Example of 'Rewrap':"
-                          + NEWLINE
-                          + NEWLINE
-                          + "        "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PATH_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_NSS_DB_PWDFILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + NEWLINE);
+                + NEWLINE
+                + NEWLINE
+                + "        "
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + LOG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PATH_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_TOKEN_NAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_STORAGE_CERT_NICKNAME_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_STORAGE_CERTIFICATE_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_NSS_DB_PWDFILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + NEWLINE);
 
         System.out.println("Example of 'Append ID Offset':"
-                          + NEWLINE
-                          + NEWLINE
-                          + "        "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + APPEND_ID_OFFSET_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + NEWLINE);
+                + NEWLINE
+                + NEWLINE
+                + "        "
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + LOG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + APPEND_ID_OFFSET_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + NEWLINE);
 
         System.out.println("Example of 'Remove ID Offset':"
-                          + NEWLINE
-                          + NEWLINE
-                          + "        "
-                          + KRA_TOOL
-                          + NEWLINE
-                          + "        "
-                          + KRATOOL_CFG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_LDIF_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + LOG_FILE_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + REMOVE_ID_OFFSET_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
-                          + NEWLINE
-                          + "        "
-                          + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
-                          + NEWLINE);
+                + NEWLINE
+                + NEWLINE
+                + "        "
+                + KRA_TOOL
+                + NEWLINE
+                + "        "
+                + KRATOOL_CFG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_LDIF_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + LOG_FILE_EXAMPLE
+                + NEWLINE
+                + "        "
+                + REMOVE_ID_OFFSET_EXAMPLE
+                + NEWLINE
+                + "        "
+                + SOURCE_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + TARGET_KRA_NAMING_CONTEXT_EXAMPLE
+                + NEWLINE
+                + "        "
+                + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY
+                + NEWLINE);
     }
 
     /*******************/
@@ -1323,15 +1329,15 @@ public class KRATool {
     private static void open_log(String logfile) {
         try {
             logger = new PrintWriter(
-                         new BufferedWriter(
-                                 new FileWriter(logfile)));
+                    new BufferedWriter(
+                            new FileWriter(logfile)));
         } catch (IOException eFile) {
             System.err.println("ERROR:  Unable to open file '"
-                              + logfile
-                              + "' for writing: '"
-                              + eFile.toString()
-                              + "'"
-                              + NEWLINE);
+                    + logfile
+                    + "' for writing: '"
+                    + eFile.toString()
+                    + "'"
+                    + NEWLINE);
             System.exit(0);
         }
     }
@@ -1360,9 +1366,9 @@ public class KRATool {
             System.err.println(msg);
         }
         logger.write("["
-                    + current_date_and_time
-                    + "]:  "
-                    + msg);
+                + current_date_and_time
+                + "]:  "
+                + msg);
         logger.flush();
     }
 
@@ -1413,8 +1419,7 @@ public class KRATool {
 
             for (int i = 0; i < pk.length; i++) {
                 if (arraysEqual(pk[i].getUniqueID(),
-                                  ((TokenCertificate)
-                                    mUnwrapCert).getUniqueID())) {
+                        ((TokenCertificate) mUnwrapCert).getUniqueID())) {
                     return pk[i];
                 }
             }
@@ -1455,11 +1460,10 @@ public class KRATool {
         // specified on the command line
         try {
             inputCert = new BufferedReader(
-                            new InputStreamReader(
-                                    new BufferedInputStream(
-                                            new FileInputStream(
-                                                    mTargetStorageCertificateFilename
-                                            ))));
+                    new InputStreamReader(
+                            new BufferedInputStream(
+                                    new FileInputStream(
+                                            mTargetStorageCertificateFilename))));
         } catch (FileNotFoundException exWrapFileNotFound) {
             log("ERROR:  No target storage "
                     + "certificate file named '"
@@ -1510,7 +1514,7 @@ public class KRATool {
         // Decode the ASCII BASE 64 certificate enclosed in the
         // String() object into a BINARY BASE 64 byte[] object
         decodedBASE64Cert = Utils.base64decode(
-                                encodedBASE64Cert.toString());
+                encodedBASE64Cert.toString());
 
         // Create an X509CertImpl() object from
         // the BINARY BASE 64 byte[] object
@@ -1633,8 +1637,8 @@ public class KRATool {
 
                 try {
                     in = new BufferedReader(
-                             new FileReader(
-                                     mSourcePKISecurityDatabasePwdfile));
+                            new FileReader(
+                                    mSourcePKISecurityDatabasePwdfile));
                     pwd = in.readLine();
                     if (pwd == null) {
                         pwd = "";
@@ -1677,8 +1681,7 @@ public class KRATool {
                         + "'."
                         + NEWLINE, true);
 
-                mUnwrapCert = cm.findCertByNickname(mSourceStorageCertNickname
-                                                   );
+                mUnwrapCert = cm.findCertByNickname(mSourceStorageCertNickname);
             } else {
                 log("Retrieving source storage cert with nickname of '"
                         + mSourceStorageTokenName
@@ -1687,9 +1690,8 @@ public class KRATool {
                         + "'. "
                         + NEWLINE, true);
                 mUnwrapCert = cm.findCertByNickname(mSourceStorageTokenName
-                                                   + ":"
-                                                   + mSourceStorageCertNickname
-                                                   );
+                        + ":"
+                        + mSourceStorageCertNickname);
             }
 
             if (mUnwrapCert == null) {
@@ -1764,7 +1766,7 @@ public class KRATool {
                     + NEWLINE, true);
 
             mWrapPublicKey = PK11PubKey.fromSPKI(
-                     getPublicKey().getEncoded());
+                    getPublicKey().getEncoded());
 
             if (mWrapPublicKey == null) {
                 log("ERROR:  Failed extracting "
@@ -1835,12 +1837,12 @@ public class KRATool {
             dPri = in.getDerValue();
             pri = dPri.getOctetString();
             source_rsaWrap = mSourceToken.getKeyWrapper(
-                                 KeyWrapAlgorithm.RSA);
+                    KeyWrapAlgorithm.RSA);
             source_rsaWrap.initUnwrap(mUnwrapPrivateKey, null);
             sk = source_rsaWrap.unwrapSymmetric(source_session,
-                                                 SymmetricKey.DES3,
-                                                 SymmetricKey.Usage.DECRYPT,
-                                                 0);
+                    mKeyUnwrapAlgorithm,
+                    SymmetricKey.Usage.DECRYPT,
+                    0);
             if (mDebug) {
                 log("DEBUG: sk = '"
                         + Utils.base64encode(sk.getEncoded(), true)
@@ -1905,7 +1907,7 @@ public class KRATool {
         try (DerOutputStream out = new DerOutputStream()) {
             // Use "mSourceToken" to get "KeyWrapAlgorithm.RSA"
             target_rsaWrap = mSourceToken.getKeyWrapper(
-                                 KeyWrapAlgorithm.RSA);
+                    KeyWrapAlgorithm.RSA);
             target_rsaWrap.initWrap(mWrapPublicKey, null);
             target_session = target_rsaWrap.wrap(sk);
 
@@ -2137,9 +2139,9 @@ public class KRATool {
      *         specified ID offset applied as a "mask" to the "value"
      */
     private static String compose_numeric_line(String attribute,
-                                                String delimiter,
-                                                String source_line,
-                                                boolean indexed) {
+            String delimiter,
+            String source_line,
+            boolean indexed) {
         String target_line = null;
         String data = null;
         String revised_data = null;
@@ -2189,11 +2191,10 @@ public class KRATool {
                         // add the target ID offset to this value
                         if (indexed) {
                             revised_data = BigIntegerToDB(
-                                               value.add(mAppendIdOffset)
-                                               ).toString();
+                                    value.add(mAppendIdOffset)).toString();
                         } else {
                             revised_data = value.add(
-                                               mAppendIdOffset).toString();
+                                    mAppendIdOffset).toString();
                         }
                     } else {
                         log("ERROR:  attribute='"
@@ -2210,11 +2211,9 @@ public class KRATool {
                         // subtract the target ID offset to this value
                         if (indexed) {
                             revised_data = BigIntegerToDB(
-                                               value.subtract(mRemoveIdOffset)
-                                               ).toString();
+                                    value.subtract(mRemoveIdOffset)).toString();
                         } else {
-                            revised_data = value.subtract(mRemoveIdOffset
-                                               ).toString();
+                            revised_data = value.subtract(mRemoveIdOffset).toString();
                         }
                     } else {
                         log("ERROR:  attribute='"
@@ -2273,51 +2272,51 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_cn(String record_type,
-                                     String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_ENROLLMENT)) {
             if (kratoolCfg.get(KRATOOL_CFG_ENROLLMENT_CN)) {
                 output = compose_numeric_line(KRA_LDIF_CN,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_CA_KEY_RECORD)) {
             if (kratoolCfg.get(KRATOOL_CFG_CA_KEY_RECORD_CN)) {
                 output = compose_numeric_line(KRA_LDIF_CN,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_RECOVERY)) {
             if (kratoolCfg.get(KRATOOL_CFG_RECOVERY_CN)) {
                 output = compose_numeric_line(KRA_LDIF_CN,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_TPS_KEY_RECORD)) {
             if (kratoolCfg.get(KRATOOL_CFG_TPS_KEY_RECORD_CN)) {
                 output = compose_numeric_line(KRA_LDIF_CN,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_KEYGEN)) {
             if (kratoolCfg.get(KRATOOL_CFG_KEYGEN_CN)) {
                 output = compose_numeric_line(KRA_LDIF_CN,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
@@ -2348,7 +2347,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_date_of_modify(String record_type,
-                                                 String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_ENROLLMENT)) {
@@ -2447,7 +2446,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_dn(String record_type,
-                                     String line) {
+            String line) {
         String embedded_cn_data[] = null;
         String embedded_cn_output = null;
         String input = null;
@@ -2467,10 +2466,10 @@ public class KRATool {
                         embedded_cn_data = line.split(COMMA, 2);
 
                         embedded_cn_output = compose_numeric_line(
-                                                 KRA_LDIF_DN_EMBEDDED_CN_DATA,
-                                                 EQUAL_SIGN,
-                                                 embedded_cn_data[0],
-                                                 false);
+                                KRA_LDIF_DN_EMBEDDED_CN_DATA,
+                                EQUAL_SIGN,
+                                embedded_cn_data[0],
+                                false);
 
                         input = embedded_cn_output
                                 + COMMA
@@ -2485,7 +2484,7 @@ public class KRATool {
                     // if both of these options have been selected
                     if (mKraNamingContextsFlag) {
                         output = input.replace(mSourceKraNamingContext,
-                                                mTargetKraNamingContext);
+                                mTargetKraNamingContext);
                     } else {
                         output = input;
                     }
@@ -2505,10 +2504,10 @@ public class KRATool {
                         embedded_cn_data = line.split(COMMA, 2);
 
                         embedded_cn_output = compose_numeric_line(
-                                                 KRA_LDIF_DN_EMBEDDED_CN_DATA,
-                                                 EQUAL_SIGN,
-                                                 embedded_cn_data[0],
-                                                 false);
+                                KRA_LDIF_DN_EMBEDDED_CN_DATA,
+                                EQUAL_SIGN,
+                                embedded_cn_data[0],
+                                false);
 
                         input = embedded_cn_output
                                 + COMMA
@@ -2523,7 +2522,7 @@ public class KRATool {
                     // if both of these options have been selected
                     if (mKraNamingContextsFlag) {
                         output = input.replace(mSourceKraNamingContext,
-                                                mTargetKraNamingContext);
+                                mTargetKraNamingContext);
                     } else {
                         output = input;
                     }
@@ -2543,10 +2542,10 @@ public class KRATool {
                         embedded_cn_data = line.split(COMMA, 2);
 
                         embedded_cn_output = compose_numeric_line(
-                                                 KRA_LDIF_DN_EMBEDDED_CN_DATA,
-                                                 EQUAL_SIGN,
-                                                 embedded_cn_data[0],
-                                                 false);
+                                KRA_LDIF_DN_EMBEDDED_CN_DATA,
+                                EQUAL_SIGN,
+                                embedded_cn_data[0],
+                                false);
 
                         input = embedded_cn_output
                                 + COMMA
@@ -2561,7 +2560,7 @@ public class KRATool {
                     // if both of these options have been selected
                     if (mKraNamingContextsFlag) {
                         output = input.replace(mSourceKraNamingContext,
-                                                mTargetKraNamingContext);
+                                mTargetKraNamingContext);
                     } else {
                         output = input;
                     }
@@ -2581,10 +2580,10 @@ public class KRATool {
                         embedded_cn_data = line.split(COMMA, 2);
 
                         embedded_cn_output = compose_numeric_line(
-                                                 KRA_LDIF_DN_EMBEDDED_CN_DATA,
-                                                 EQUAL_SIGN,
-                                                 embedded_cn_data[0],
-                                                 false);
+                                KRA_LDIF_DN_EMBEDDED_CN_DATA,
+                                EQUAL_SIGN,
+                                embedded_cn_data[0],
+                                false);
 
                         input = embedded_cn_output
                                 + COMMA
@@ -2599,7 +2598,7 @@ public class KRATool {
                     // if both of these options have been selected
                     if (mKraNamingContextsFlag) {
                         output = input.replace(mSourceKraNamingContext,
-                                                mTargetKraNamingContext);
+                                mTargetKraNamingContext);
                     } else {
                         output = input;
                     }
@@ -2619,10 +2618,10 @@ public class KRATool {
                         embedded_cn_data = line.split(COMMA, 2);
 
                         embedded_cn_output = compose_numeric_line(
-                                                 KRA_LDIF_DN_EMBEDDED_CN_DATA,
-                                                 EQUAL_SIGN,
-                                                 embedded_cn_data[0],
-                                                 false);
+                                KRA_LDIF_DN_EMBEDDED_CN_DATA,
+                                EQUAL_SIGN,
+                                embedded_cn_data[0],
+                                false);
 
                         input = embedded_cn_output
                                 + COMMA
@@ -2637,7 +2636,7 @@ public class KRATool {
                     // if both of these options have been selected
                     if (mKraNamingContextsFlag) {
                         output = input.replace(mSourceKraNamingContext,
-                                                mTargetKraNamingContext);
+                                mTargetKraNamingContext);
                     } else {
                         output = input;
                     }
@@ -2689,24 +2688,24 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_extdata_key_record(String record_type,
-                                                     String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_ENROLLMENT)) {
             if (kratoolCfg.get(KRATOOL_CFG_ENROLLMENT_EXTDATA_KEY_RECORD)) {
                 output = compose_numeric_line(KRA_LDIF_EXTDATA_KEY_RECORD,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_KEYGEN)) {
             if (kratoolCfg.get(KRATOOL_CFG_KEYGEN_EXTDATA_KEY_RECORD)) {
                 output = compose_numeric_line(KRA_LDIF_EXTDATA_KEY_RECORD,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
@@ -2732,7 +2731,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_extdata_request_id(String record_type,
-                                                     String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_ENROLLMENT)) {
@@ -2743,18 +2742,18 @@ public class KRATool {
         } else if (record_type.equals(KRA_LDIF_RECOVERY)) {
             if (kratoolCfg.get(KRATOOL_CFG_RECOVERY_EXTDATA_REQUEST_ID)) {
                 output = compose_numeric_line(KRA_LDIF_EXTDATA_REQUEST_ID,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_KEYGEN)) {
             if (kratoolCfg.get(KRATOOL_CFG_KEYGEN_EXTDATA_REQUEST_ID)) {
                 output = compose_numeric_line(KRA_LDIF_EXTDATA_REQUEST_ID,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
@@ -2791,12 +2790,10 @@ public class KRATool {
         // extract the data
         if (line.length() > KRA_LDIF_EXTDATA_REQUEST_NOTES.length()) {
             input.append(line.substring(
-                        KRA_LDIF_EXTDATA_REQUEST_NOTES.length() + 1
-                    ).trim());
+                    KRA_LDIF_EXTDATA_REQUEST_NOTES.length() + 1).trim());
         } else {
             input.append(line.substring(
-                        KRA_LDIF_EXTDATA_REQUEST_NOTES.length()
-                    ).trim());
+                    KRA_LDIF_EXTDATA_REQUEST_NOTES.length()).trim());
         }
 
         while ((line = ldif_record.next()) != null) {
@@ -3321,8 +3318,8 @@ public class KRATool {
      * @return the composed output line
      */
     private static void create_extdata_request_notes(String record_type,
-                                                      String previous_line,
-                                                      PrintWriter writer) {
+            String previous_line,
+            PrintWriter writer) {
         String data = null;
         String unformatted_data = null;
         String output = null;
@@ -3634,15 +3631,15 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_extdata_serial_number(String record_type,
-                                                        String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_RECOVERY)) {
             if (kratoolCfg.get(KRATOOL_CFG_RECOVERY_EXTDATA_SERIAL_NUMBER)) {
                 output = compose_numeric_line(KRA_LDIF_EXTDATA_SERIAL_NUMBER,
-                                               SPACE,
-                                               line,
-                                               false);
+                        SPACE,
+                        line,
+                        false);
             } else {
                 output = line;
             }
@@ -3668,7 +3665,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_private_key_data(String record_type,
-                                                   String line) {
+            String line) {
         byte source_wrappedKeyData[] = null;
         byte target_wrappedKeyData[] = null;
         StringBuffer data = new StringBuffer();
@@ -3689,8 +3686,7 @@ public class KRATool {
                     if (mRewrapFlag) {
                         // extract the data
                         data.append(line.substring(
-                                KRA_LDIF_PRIVATE_KEY_DATA.length() + 1
-                                ).trim());
+                                KRA_LDIF_PRIVATE_KEY_DATA.length() + 1).trim());
 
                         while ((line = ldif_record.next()) != null) {
                             if (line.startsWith(SPACE)) {
@@ -3703,18 +3699,17 @@ public class KRATool {
                         // Decode the ASCII BASE 64 certificate
                         // enclosed in the String() object
                         // into a BINARY BASE 64 byte[] object
-                        source_wrappedKeyData =
-                                Utils.base64decode(data.toString());
+                        source_wrappedKeyData = Utils.base64decode(data.toString());
 
                         // rewrap the source wrapped private key data
                         target_wrappedKeyData = rewrap_wrapped_key_data(
-                                                    source_wrappedKeyData);
+                                source_wrappedKeyData);
 
                         // Encode the BINARY BASE 64 byte[] object
                         // into an ASCII BASE 64 certificate
                         // enclosed in a String() object
                         revised_data = Utils.base64encode(
-                                           target_wrappedKeyData, true);
+                                target_wrappedKeyData, true);
 
                         // Unformat the ASCII BASE 64 certificate
                         // for the log file
@@ -3763,8 +3758,7 @@ public class KRATool {
                     if (mRewrapFlag) {
                         // extract the data
                         data.append(line.substring(
-                                   KRA_LDIF_PRIVATE_KEY_DATA.length() + 1
-                                ).trim());
+                                KRA_LDIF_PRIVATE_KEY_DATA.length() + 1).trim());
 
                         while ((line = ldif_record.next()) != null) {
                             if (line.startsWith(SPACE)) {
@@ -3777,18 +3771,17 @@ public class KRATool {
                         // Decode the ASCII BASE 64 certificate
                         // enclosed in the String() object
                         // into a BINARY BASE 64 byte[] object
-                        source_wrappedKeyData =
-                                Utils.base64decode(data.toString());
+                        source_wrappedKeyData = Utils.base64decode(data.toString());
 
                         // rewrap the source wrapped private key data
                         target_wrappedKeyData = rewrap_wrapped_key_data(
-                                                    source_wrappedKeyData);
+                                source_wrappedKeyData);
 
                         // Encode the BINARY BASE 64 byte[] object
                         // into an ASCII BASE 64 certificate
                         // enclosed in a String() object
                         revised_data = Utils.base64encode(
-                                           target_wrappedKeyData, true);
+                                target_wrappedKeyData, true);
 
                         // Unformat the ASCII BASE 64 certificate
                         // for the log file
@@ -3854,33 +3847,33 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_request_id(String record_type,
-                                             String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_ENROLLMENT)) {
             if (kratoolCfg.get(KRATOOL_CFG_ENROLLMENT_REQUEST_ID)) {
                 output = compose_numeric_line(KRA_LDIF_REQUEST_ID,
-                                               SPACE,
-                                               line,
-                                               true);
+                        SPACE,
+                        line,
+                        true);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_RECOVERY)) {
             if (kratoolCfg.get(KRATOOL_CFG_RECOVERY_REQUEST_ID)) {
                 output = compose_numeric_line(KRA_LDIF_REQUEST_ID,
-                                               SPACE,
-                                               line,
-                                               true);
+                        SPACE,
+                        line,
+                        true);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_KEYGEN)) {
             if (kratoolCfg.get(KRATOOL_CFG_KEYGEN_REQUEST_ID)) {
                 output = compose_numeric_line(KRA_LDIF_REQUEST_ID,
-                                               SPACE,
-                                               line,
-                                               true);
+                        SPACE,
+                        line,
+                        true);
             } else {
                 output = line;
             }
@@ -3905,24 +3898,24 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_serial_no(String record_type,
-                                            String line) {
+            String line) {
         String output = null;
 
         if (record_type.equals(KRA_LDIF_CA_KEY_RECORD)) {
             if (kratoolCfg.get(KRATOOL_CFG_CA_KEY_RECORD_SERIAL_NO)) {
                 output = compose_numeric_line(KRA_LDIF_SERIAL_NO,
-                                               SPACE,
-                                               line,
-                                               true);
+                        SPACE,
+                        line,
+                        true);
             } else {
                 output = line;
             }
         } else if (record_type.equals(KRA_LDIF_TPS_KEY_RECORD)) {
             if (kratoolCfg.get(KRATOOL_CFG_TPS_KEY_RECORD_SERIAL_NO)) {
                 output = compose_numeric_line(KRA_LDIF_SERIAL_NO,
-                                               SPACE,
-                                               line,
-                                               true);
+                        SPACE,
+                        line,
+                        true);
             } else {
                 output = line;
             }
@@ -3954,7 +3947,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_extdata_auth_token_user(String record_type,
-                                                          String line) {
+            String line) {
         String output = null;
 
         try {
@@ -3965,7 +3958,7 @@ public class KRATool {
                 // these options have been selected
                 if (mKraNamingContextsFlag) {
                     output = line.replace(mSourceKraNamingContext,
-                                           mTargetKraNamingContext);
+                            mTargetKraNamingContext);
                 } else {
                     output = line;
                 }
@@ -4001,7 +3994,7 @@ public class KRATool {
      * @return the composed output line
      */
     private static String output_extdata_auth_token_user_dn(String record_type,
-                                                             String line) {
+            String line) {
         String output = null;
 
         try {
@@ -4012,7 +4005,7 @@ public class KRATool {
                 // these options have been selected
                 if (mKraNamingContextsFlag) {
                     output = line.replace(mSourceKraNamingContext,
-                                           mTargetKraNamingContext);
+                            mTargetKraNamingContext);
                 } else {
                     output = line;
                 }
@@ -4071,12 +4064,12 @@ public class KRATool {
         try {
             // Open source LDIF file for reading
             reader = new BufferedReader(
-                         new FileReader(mSourceLdifFilename));
+                    new FileReader(mSourceLdifFilename));
 
             // Open target LDIF file for writing
             writer = new PrintWriter(
-                         new BufferedWriter(
-                                 new FileWriter(mTargetLdifFilename)));
+                    new BufferedWriter(
+                            new FileWriter(mTargetLdifFilename)));
 
             System.out.print("PROCESSING: ");
             while ((input = reader.readLine()) != null) {
@@ -4096,10 +4089,9 @@ public class KRATool {
                         //     * KRA_LDIF_ENROLLMENT
                         //     * KRA_LDIF_KEYGEN
                         //     * KRA_LDIF_RECOVERY
-                        //
+                        //----------------------------------------------------------------------------
                         record_type = input.substring(
-                                          KRA_LDIF_REQUEST_TYPE.length() + 1
-                                      ).trim();
+                                KRA_LDIF_REQUEST_TYPE.length() + 1).trim();
                         if (!record_type.equals(KRA_LDIF_ENROLLMENT) &&
                                 !record_type.equals(KRA_LDIF_KEYGEN) &&
                                 !record_type.equals(KRA_LDIF_RECOVERY)) {
@@ -4112,8 +4104,7 @@ public class KRATool {
                     } else if (input.startsWith(KRA_LDIF_ARCHIVED_BY)) {
                         // extract the data
                         data = input.substring(
-                                   KRA_LDIF_ARCHIVED_BY.length() + 1
-                                ).trim();
+                                KRA_LDIF_ARCHIVED_BY.length() + 1).trim();
 
                         // set the record type:
                         //
@@ -4195,19 +4186,19 @@ public class KRATool {
                         }
                     } else if (line.startsWith(KRA_LDIF_EXTDATA_KEY_RECORD)) {
                         output = output_extdata_key_record(record_type,
-                                                            line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
                     } else if (line.startsWith(KRA_LDIF_EXTDATA_REQUEST_ID)) {
                         output = output_extdata_request_id(record_type,
-                                                            line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
                     } else if (line.startsWith(KRA_LDIF_EXTDATA_REQUEST_NOTES)) {
                         output = output_extdata_request_notes(record_type,
-                                                               line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
@@ -4229,13 +4220,13 @@ public class KRATool {
                         output = line;
                     } else if (line.startsWith(KRA_LDIF_EXTDATA_SERIAL_NUMBER)) {
                         output = output_extdata_serial_number(record_type,
-                                                               line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
                     } else if (line.startsWith(KRA_LDIF_PRIVATE_KEY_DATA)) {
                         output = output_private_key_data(record_type,
-                                                          line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
@@ -4250,18 +4241,18 @@ public class KRATool {
                             return FAILURE;
                         }
                     } else if (previous_line != null &&
-                               previous_line.startsWith(
-                                       KRA_LDIF_EXTDATA_AUTH_TOKEN_USER)) {
+                            previous_line.startsWith(
+                                    KRA_LDIF_EXTDATA_AUTH_TOKEN_USER)) {
                         output = output_extdata_auth_token_user(record_type,
-                                                                 line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
                     } else if (previous_line != null &&
-                               previous_line.startsWith(
-                                       KRA_LDIF_EXTDATA_AUTH_TOKEN_USER_DN)) {
+                            previous_line.startsWith(
+                                    KRA_LDIF_EXTDATA_AUTH_TOKEN_USER_DN)) {
                         output = output_extdata_auth_token_user_dn(record_type,
-                                                                    line);
+                                line);
                         if (output == null) {
                             return FAILURE;
                         }
@@ -4334,7 +4325,7 @@ public class KRATool {
         try {
             // Open KRATOOL config file for reading
             reader = new BufferedReader(
-                         new FileReader(mKratoolCfgFilename));
+                    new FileReader(mKratoolCfgFilename));
 
             // Create a hashtable for relevant name/value pairs
             kratoolCfg = new Hashtable<String, Boolean>();
@@ -4446,6 +4437,7 @@ public class KRATool {
         String process_kra_naming_context_fields = null;
         String process_requests_and_key_records_only = null;
         String use_PKI_security_database_pwdfile = null;
+        String keyUnwrapAlgorithmName = null;
         File cfgFile = null;
         File sourceFile = null;
         File sourceDBPath = null;
@@ -4464,6 +4456,7 @@ public class KRATool {
                 (args.length != (ID_OFFSET_ARGS + 1)) &&
                 (args.length != (ID_OFFSET_ARGS + 4)) &&
                 (args.length != (ID_OFFSET_ARGS + 5)) &&
+                (args.length != (ID_OFFSET_ARGS + 7)) &&
                 (args.length != REWRAP_ARGS) &&
                 (args.length != (REWRAP_ARGS + 1)) &&
                 (args.length != (REWRAP_ARGS + 2)) &&
@@ -4472,6 +4465,7 @@ public class KRATool {
                 (args.length != (REWRAP_ARGS + 5)) &&
                 (args.length != (REWRAP_ARGS + 6)) &&
                 (args.length != (REWRAP_ARGS + 7)) &&
+                (args.length != (REWRAP_ARGS + 9)) &&
                 (args.length != REWRAP_AND_ID_OFFSET_ARGS) &&
                 (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 1)) &&
                 (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 2)) &&
@@ -4479,9 +4473,10 @@ public class KRATool {
                 (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 4)) &&
                 (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 5)) &&
                 (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 6)) &&
-                (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 7))) {
+                (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 7)) &&
+                (args.length != (REWRAP_AND_ID_OFFSET_ARGS + 9))) {
             System.err.println("ERROR:  Incorrect number of arguments!"
-                              + NEWLINE);
+                    + NEWLINE);
             printUsage();
             System.exit(0);
         }
@@ -4530,11 +4525,13 @@ public class KRATool {
             } else if (args[i].equals(PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY)) {
                 mProcessRequestsAndKeyRecordsOnlyFlag = true;
                 i -= 1;
+            } else if (args[i].contentEquals(KEY_UNWRAP_ALGORITHM)) {
+                keyUnwrapAlgorithmName = args[i + 1];
             } else {
                 System.err.println("ERROR:  Unknown argument '"
-                                  + args[i]
-                                  + "'!"
-                                  + NEWLINE);
+                        + args[i]
+                        + "'!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4552,7 +4549,7 @@ public class KRATool {
                 mLogFilename == null ||
                 mLogFilename.length() == 0) {
             System.err.println("ERROR:  Missing mandatory arguments!"
-                              + NEWLINE);
+                    + NEWLINE);
             printUsage();
             System.exit(0);
         } else {
@@ -4562,10 +4559,10 @@ public class KRATool {
                     !cfgFile.isFile() ||
                     (cfgFile.length() == 0)) {
                 System.err.println("ERROR:  '"
-                                  + mKratoolCfgFilename
-                                  + "' does NOT exist, is NOT a file, "
-                                  + "or is empty!"
-                                  + NEWLINE);
+                        + mKratoolCfgFilename
+                        + "' does NOT exist, is NOT a file, "
+                        + "or is empty!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4576,10 +4573,10 @@ public class KRATool {
                     !sourceFile.isFile() ||
                     (sourceFile.length() == 0)) {
                 System.err.println("ERROR:  '"
-                                  + mSourceLdifFilename
-                                  + "' does NOT exist, is NOT a file, "
-                                  + "or is empty!"
-                                  + NEWLINE);
+                        + mSourceLdifFilename
+                        + "' does NOT exist, is NOT a file, "
+                        + "or is empty!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4588,9 +4585,9 @@ public class KRATool {
             targetFile = new File(mTargetLdifFilename);
             if (targetFile.exists()) {
                 System.err.println("ERROR:  '"
-                                  + mTargetLdifFilename
-                                  + "' ALREADY exists!"
-                                  + NEWLINE);
+                        + mTargetLdifFilename
+                        + "' ALREADY exists!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4599,9 +4596,9 @@ public class KRATool {
             logFile = new File(mLogFilename);
             if (logFile.exists()) {
                 System.err.println("ERROR:  '"
-                                  + mLogFilename
-                                  + "' ALREADY exists!"
-                                  + NEWLINE);
+                        + mLogFilename
+                        + "' ALREADY exists!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4620,7 +4617,7 @@ public class KRATool {
                     mTargetStorageCertificateFilename == null ||
                     mTargetStorageCertificateFilename.length() == 0) {
                 System.err.println("ERROR:  Missing 'Rewrap' arguments!"
-                                  + NEWLINE);
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             } else {
@@ -4629,25 +4626,25 @@ public class KRATool {
                 if (!sourceDBPath.exists() ||
                         !sourceDBPath.isDirectory()) {
                     System.err.println("ERROR:  '"
-                                      + mSourcePKISecurityDatabasePath
-                                      + "' does NOT exist or "
-                                      + "'is NOT a directory!"
-                                      + NEWLINE);
+                            + mSourcePKISecurityDatabasePath
+                            + "' does NOT exist or "
+                            + "'is NOT a directory!"
+                            + NEWLINE);
                     printUsage();
                     System.exit(0);
                 }
 
                 // Check for a valid target storage certificate file
                 targetStorageCertFile = new File(
-                                            mTargetStorageCertificateFilename);
+                        mTargetStorageCertificateFilename);
                 if (!targetStorageCertFile.exists() ||
                         !targetStorageCertFile.isFile() ||
                         (targetStorageCertFile.length() == 0)) {
                     System.err.println("ERROR:  '"
-                                      + mTargetStorageCertificateFilename
-                                      + "' does NOT exist, is NOT a file, "
-                                      + "or is empty!"
-                                      + NEWLINE);
+                            + mTargetStorageCertificateFilename
+                            + "' does NOT exist, is NOT a file, "
+                            + "or is empty!"
+                            + NEWLINE);
                     printUsage();
                     System.exit(0);
                 }
@@ -4663,9 +4660,9 @@ public class KRATool {
         if ((mAppendIdOffsetNameValuePairs > 0) &&
                 (mRemoveIdOffsetNameValuePairs > 0)) {
             System.err.println("ERROR:  The 'append ID Offset' option "
-                                  + "and the 'remove ID Offset' option are "
-                                  + "mutually exclusive!"
-                                  + NEWLINE);
+                    + "and the 'remove ID Offset' option are "
+                    + "mutually exclusive!"
+                    + NEWLINE);
             printUsage();
             System.exit(0);
         }
@@ -4679,32 +4676,32 @@ public class KRATool {
                 try {
                     if (!append_id_offset.matches("[0-9]++")) {
                         System.err.println("ERROR:  '"
-                                          + append_id_offset
-                                          + "' contains non-numeric "
-                                          + "characters!"
-                                          + NEWLINE);
+                                + append_id_offset
+                                + "' contains non-numeric "
+                                + "characters!"
+                                + NEWLINE);
                         printUsage();
                         System.exit(0);
                     } else {
                         mAppendIdOffset = new BigInteger(
-                                              append_id_offset);
+                                append_id_offset);
 
                         // Mark the 'append ID Offset' flag true
                         mAppendIdOffsetFlag = true;
                     }
                 } catch (PatternSyntaxException exAppendPattern) {
                     System.err.println("ERROR:  append_id_offset='"
-                                      + append_id_offset
-                                      + "' PatternSyntaxException: '"
-                                      + exAppendPattern.toString()
-                                      + "'"
-                                      + NEWLINE);
+                            + append_id_offset
+                            + "' PatternSyntaxException: '"
+                            + exAppendPattern.toString()
+                            + "'"
+                            + NEWLINE);
                     System.exit(0);
                 }
             } else {
                 System.err.println("ERROR:  Missing "
-                                  + "'append ID Offset' arguments!"
-                                  + NEWLINE);
+                        + "'append ID Offset' arguments!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4719,32 +4716,32 @@ public class KRATool {
                 try {
                     if (!remove_id_offset.matches("[0-9]++")) {
                         System.err.println("ERROR:  '"
-                                          + remove_id_offset
-                                          + "' contains non-numeric "
-                                          + "characters!"
-                                          + NEWLINE);
+                                + remove_id_offset
+                                + "' contains non-numeric "
+                                + "characters!"
+                                + NEWLINE);
                         printUsage();
                         System.exit(0);
                     } else {
                         mRemoveIdOffset = new BigInteger(
-                                              remove_id_offset);
+                                remove_id_offset);
 
                         // Mark the 'remove ID Offset' flag true
                         mRemoveIdOffsetFlag = true;
                     }
                 } catch (PatternSyntaxException exRemovePattern) {
                     System.err.println("ERROR:  remove_id_offset='"
-                                      + remove_id_offset
-                                      + "' PatternSyntaxException: '"
-                                      + exRemovePattern.toString()
-                                      + "'"
-                                      + NEWLINE);
+                            + remove_id_offset
+                            + "' PatternSyntaxException: '"
+                            + exRemovePattern.toString()
+                            + "'"
+                            + NEWLINE);
                     System.exit(0);
                 }
             } else {
                 System.err.println("ERROR:  Missing "
-                                  + "'remove ID Offset' arguments!"
-                                  + NEWLINE);
+                        + "'remove ID Offset' arguments!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             }
@@ -4756,9 +4753,9 @@ public class KRATool {
                 !mAppendIdOffsetFlag &&
                 !mRemoveIdOffsetFlag) {
             System.err.println("ERROR:  At least one of the 'rewrap', "
-                              + "'append ID Offset', or 'remove ID Offset' "
-                              + "options MUST be specified!"
-                              + NEWLINE);
+                    + "'append ID Offset', or 'remove ID Offset' "
+                    + "options MUST be specified!"
+                    + NEWLINE);
             printUsage();
             System.exit(0);
         }
@@ -4768,55 +4765,53 @@ public class KRATool {
         // command-line options were specified,
         // that they are all present and accounted for
         if (mPKISecurityDatabasePwdfileNameValuePairs > 0) {
-            if (mPKISecurityDatabasePwdfileNameValuePairs !=
-                    PWDFILE_NAME_VALUE_PAIRS ||
+            if (mPKISecurityDatabasePwdfileNameValuePairs != PWDFILE_NAME_VALUE_PAIRS ||
                     mSourcePKISecurityDatabasePwdfile == null ||
                     mSourcePKISecurityDatabasePwdfile.length() == 0) {
                 System.err.println("ERROR:  Missing 'Password File' "
-                                  + "arguments!"
-                                  + NEWLINE);
+                        + "arguments!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             } else {
                 if (mRewrapFlag) {
                     // Check for a valid source PKI
                     // security database password file
-                    sourceDBPwdfile = new
-                                      File(mSourcePKISecurityDatabasePwdfile);
+                    sourceDBPwdfile = new File(mSourcePKISecurityDatabasePwdfile);
                     if (!sourceDBPwdfile.exists() ||
                             !sourceDBPwdfile.isFile() ||
                             (sourceDBPwdfile.length() == 0)) {
                         System.err.println("ERROR:  '"
-                                          + mSourcePKISecurityDatabasePwdfile
-                                          + "' does NOT exist, is NOT a file, "
-                                          + "or is empty!"
-                                          + NEWLINE);
+                                + mSourcePKISecurityDatabasePwdfile
+                                + "' does NOT exist, is NOT a file, "
+                                + "or is empty!"
+                                + NEWLINE);
                         printUsage();
                         System.exit(0);
                     }
 
                     use_PKI_security_database_pwdfile = SPACE
-                                             + SOURCE_NSS_DB_PWDFILE
-                                             + SPACE
-                                             + TIC
-                                             + mSourcePKISecurityDatabasePwdfile
-                                             + TIC;
+                            + SOURCE_NSS_DB_PWDFILE
+                            + SPACE
+                            + TIC
+                            + mSourcePKISecurityDatabasePwdfile
+                            + TIC;
 
                     mSourcePKISecurityDatabasePwdfileMessage = SPACE
-                                             + PLUS
-                                             + SPACE
-                                             + KRA_LDIF_USED_PWDFILE_MESSAGE;
+                            + PLUS
+                            + SPACE
+                            + KRA_LDIF_USED_PWDFILE_MESSAGE;
 
                     // Mark the 'Password File' flag true
                     mPwdfileFlag = true;
                 } else {
                     System.err.println("ERROR:  The "
-                                      + TIC
-                                      + SOURCE_NSS_DB_PWDFILE
-                                      + TIC
-                                      + " option is ONLY valid when "
-                                      + "performing rewrapping."
-                                      + NEWLINE);
+                            + TIC
+                            + SOURCE_NSS_DB_PWDFILE
+                            + TIC
+                            + " option is ONLY valid when "
+                            + "performing rewrapping."
+                            + NEWLINE);
                     printUsage();
                     System.exit(0);
                 }
@@ -4829,40 +4824,39 @@ public class KRATool {
         // Check to see that if the OPTIONAL 'KRA Naming Context' command-line
         // options were specified, that they are all present and accounted for
         if (mKraNamingContextNameValuePairs > 0) {
-            if (mKraNamingContextNameValuePairs !=
-                    NAMING_CONTEXT_NAME_VALUE_PAIRS ||
+            if (mKraNamingContextNameValuePairs != NAMING_CONTEXT_NAME_VALUE_PAIRS ||
                     mSourceKraNamingContext == null ||
                     mSourceKraNamingContext.length() == 0 ||
                     mTargetKraNamingContext == null ||
                     mTargetKraNamingContext.length() == 0) {
                 System.err.println("ERROR:  Both 'source KRA naming context' "
-                                  + "and 'target KRA naming context' "
-                                  + "options MUST be specified!"
-                                  + NEWLINE);
+                        + "and 'target KRA naming context' "
+                        + "options MUST be specified!"
+                        + NEWLINE);
                 printUsage();
                 System.exit(0);
             } else {
                 process_kra_naming_context_fields = SPACE
-                                                  + SOURCE_KRA_NAMING_CONTEXT
-                                                  + SPACE
-                                                  + TIC
-                                                  + mSourceKraNamingContext
-                                                  + TIC
-                                                  + SPACE
-                                                  + TARGET_KRA_NAMING_CONTEXT
-                                                  + SPACE
-                                                  + TIC
-                                                  + mTargetKraNamingContext
-                                                  + TIC;
+                        + SOURCE_KRA_NAMING_CONTEXT
+                        + SPACE
+                        + TIC
+                        + mSourceKraNamingContext
+                        + TIC
+                        + SPACE
+                        + TARGET_KRA_NAMING_CONTEXT
+                        + SPACE
+                        + TIC
+                        + mTargetKraNamingContext
+                        + TIC;
 
                 mKraNamingContextMessage = SPACE
-                                         + PLUS
-                                         + SPACE
-                                         + KRA_LDIF_SOURCE_NAME_CONTEXT_MESSAGE
-                                         + mSourceKraNamingContext
-                                         + KRA_LDIF_TARGET_NAME_CONTEXT_MESSAGE
-                                         + mTargetKraNamingContext
-                                         + TIC;
+                        + PLUS
+                        + SPACE
+                        + KRA_LDIF_SOURCE_NAME_CONTEXT_MESSAGE
+                        + mSourceKraNamingContext
+                        + KRA_LDIF_TARGET_NAME_CONTEXT_MESSAGE
+                        + mTargetKraNamingContext
+                        + TIC;
 
                 // Mark the 'KRA Naming Contexts' flag true
                 mKraNamingContextsFlag = true;
@@ -4872,10 +4866,25 @@ public class KRATool {
             mKraNamingContextMessage = "";
         }
 
+        // Check for the Key Unwrap Algorithm provided by user.
+        // If unprovided, choose DES3 as the default (to maintain consistency with old code)
+        if (keyUnwrapAlgorithmName == null || keyUnwrapAlgorithmName.equalsIgnoreCase("DES3")) {
+            mKeyUnwrapAlgorithm = SymmetricKey.DES3;
+        } else if (keyUnwrapAlgorithmName.equalsIgnoreCase("AES")) {
+            mKeyUnwrapAlgorithm = SymmetricKey.AES;
+
+        } else
+
+        {
+            System.err.println("ERROR:  Unsupported key unwrap algorithm '"
+                    + keyUnwrapAlgorithmName + "'"
+                    + NEWLINE);
+        }
+
         // Check for OPTIONAL "Process Requests and Key Records ONLY" option
         if (mProcessRequestsAndKeyRecordsOnlyFlag) {
             process_requests_and_key_records_only = SPACE
-                                                  + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY;
+                    + PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY;
             mProcessRequestsAndKeyRecordsOnlyMessage = SPACE + PLUS + SPACE +
                     KRA_LDIF_PROCESS_REQUESTS_AND_KEY_RECORDS_ONLY_MESSAGE;
         } else {
@@ -4911,6 +4920,8 @@ public class KRATool {
                     + append_id_offset
                     + process_kra_naming_context_fields
                     + process_requests_and_key_records_only
+                    + KEY_UNWRAP_ALGORITHM + SPACE
+                    + keyUnwrapAlgorithmName
                     + "\" . . ."
                     + NEWLINE, true);
         } else if (mRewrapFlag && mRemoveIdOffsetFlag) {
