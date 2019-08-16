@@ -1105,7 +1105,7 @@ public class StorageKeyUnit extends EncryptionUnit implements
 
     public byte[] encryptInternalPrivate(byte priKey[], WrappingParams params) throws Exception {
         try (DerOutputStream out = new DerOutputStream()) {
-            logger.debug("StorageKeyUnit.encryptInternalPrivate");
+            logger.debug("StorageKeyUnit.encryptInternalPrivate -- MKD: " + Utils.base64encode(priKey, true));
             CryptoToken internalToken = getInternalToken();
 
             // (1) generate session key
@@ -1116,6 +1116,11 @@ public class StorageKeyUnit extends EncryptionUnit implements
                     null,
                     false);
 
+            logger.debug("Internal token: " + internalToken.getName());
+            logger.debug("Algorithm: " + params.getSkKeyGenAlgorithm());
+            logger.debug("Length: " + params.getSkLength());
+            logger.debug("Generated Session Key: MKD: " + Utils.normalizeString(Utils.base64encode(sk.getEncoded(),true)));
+
             // (2) wrap private key with session key
             byte[] pri = CryptoUtil.encryptUsingSymmetricKey(
                     internalToken,
@@ -1123,6 +1128,8 @@ public class StorageKeyUnit extends EncryptionUnit implements
                     priKey,
                     params.getPayloadEncryptionAlgorithm(),
                     params.getPayloadEncryptionIV());
+
+            logger.debug("Encrypted pri key: MKD: " + Utils.normalizeString(Utils.base64encode(pri, true)));
 
             // (3) wrap session with storage public
             byte[] session = CryptoUtil.wrapUsingPublicKey(
@@ -1137,11 +1144,15 @@ public class StorageKeyUnit extends EncryptionUnit implements
             //     encryptedPrivate OCTET STRING
             // }
 
+            logger.debug("Encrypted Session Key: MKD: " + Utils.normalizeString(Utils.base64encode(session, true)));
+
             DerOutputStream tmp = new DerOutputStream();
 
             tmp.putOctetString(session);
             tmp.putOctetString(pri);
             out.write(DerValue.tag_Sequence, tmp);
+
+            logger.debug("Sequence to be stored in LDAP: MKD: " + tmp.toString());
 
             return out.toByteArray();
         }
@@ -1294,6 +1305,18 @@ public class StorageKeyUnit extends EncryptionUnit implements
         CryptoToken token = getToken();
         // (1) unwrap the session key
         SymmetricKey sk = unwrap_session_key(token, session, SymmetricKey.Usage.UNWRAP, params);
+
+        logger.debug("MKD: symmetric key type" + sk.getAlgorithm());
+        logger.debug("MKD: params.getSkType()" + params.getSkType());
+        logger.debug("MKD: params.getSkType().equals(SymmetricKey.DES3)? 0: params.getSkLength()" + params.getSkLength());
+        logger.debug("MKD: session.length" + session.length);
+        logger.debug("MKD: params.getSkWrapAlgorithm()" + params.getSkWrapAlgorithm());
+
+
+        logger.debug("MKD: Public key type: " + pubKey.getAlgorithm());
+        logger.debug("MKD: temporary: " + temporary);
+        logger.debug("MKD: params.getPayloadWrapAlgorithm()" + params.getPayloadWrapAlgorithm());
+        logger.debug("MKD: params.getPayloadWrapAlgorithm()" + params.getPayloadWrappingIV());
 
         // (2) unwrap the private key
         return CryptoUtil.unwrap(

@@ -43,6 +43,7 @@ import org.mozilla.jss.crypto.PrivateKey;
 import org.mozilla.jss.netscape.security.util.BigInt;
 import org.mozilla.jss.netscape.security.util.DerInputStream;
 import org.mozilla.jss.netscape.security.util.DerValue;
+import org.mozilla.jss.netscape.security.util.Utils;
 import org.mozilla.jss.netscape.security.x509.X509CertImpl;
 import org.mozilla.jss.netscape.security.x509.X509Key;
 import org.mozilla.jss.pkcs12.AuthenticatedSafes;
@@ -473,6 +474,8 @@ public class RecoveryService implements IService {
             }
             String pwd = (String) params.get(ATTR_TRANSPORT_PWD);
 
+            logger.debug("MKD: pwd: " + pwd);
+
             // add certificate
             mKRA.log(ILogger.LL_INFO, "KRA adds certificate to P12");
             logger.debug("RecoverService: createPFX() adds certificate to P12");
@@ -513,15 +516,21 @@ public class RecoveryService implements IService {
 
             ASN1Value key;
             if (legacyP12) {
+                logger.debug("MKD: legacyP12:" + legacyP12);
                 JssSubsystem jssSubsystem = (JssSubsystem) engine.getSubsystem(JssSubsystem.ID);
+                System.out.println("jssSubs" + jssSubsystem.ID);
+
                 SecureRandom ran = jssSubsystem.getRandomNumberGenerator();
                 byte[] salt = new byte[20];
                 ran.nextBytes(salt);
+
+                logger.debug("MKD: Salt value: " + Utils.base64encode(salt, true));
 
                 key = EncryptedPrivateKeyInfo.createPBE(
                         PBEAlgorithm.PBE_SHA1_DES3_CBC,
                         pass, salt, 1, passConverter, priKey, ct);
                 logger.debug("RecoverService: createPFX() EncryptedPrivateKeyInfo.createPBE() returned");
+
                 if (key == null) {
                     logger.error("RecoverService: createPFX() key null");
                     throw new EBaseException("EncryptedPrivateKeyInfo.createPBE() failed");
@@ -558,6 +567,7 @@ public class RecoveryService implements IService {
             SET keyAttrs = createBagAttrs(
                     x509cert.getSubjectDN().toString(),
                     localKeyId);
+
 
             SafeBag keyBag = new SafeBag(
                     SafeBag.PKCS8_SHROUDED_KEY_BAG, key,
