@@ -53,6 +53,16 @@ script:
 matrix:
   fast_finish: true
   include:
+
+    - stage: Fedora 31
+      env: IMAGE=fedora:31 TASK="PKI"
+    - env: IMAGE=fedora:31 TASK="IPA"
+    - env: DUMMY_JOB=FOR_FAST_FINISH
+      before_install: true
+      install: true
+      script: true
+      after_script: true
+
     - stage: rawhide
       env: IMAGE=fedora:rawhide TASK="PKI"
     - env: IMAGE=fedora:rawhide TASK="IPA"
@@ -63,6 +73,10 @@ matrix:
       script: true
       after_script: true
   allow_failures:
+    # Since Fedora 31 has not reached its GA, we allow it to fail
+    - stage: Fedora 31
+      env: IMAGE=fedora:31 TASK="PKI"
+    - env: IMAGE=fedora:31 TASK="IPA"
     - stage: rawhide
       env: IMAGE=fedora:rawhide TASK="PKI"
     - env: IMAGE=fedora:rawhide TASK="IPA"
