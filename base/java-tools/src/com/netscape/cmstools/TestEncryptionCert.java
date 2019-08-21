@@ -4,7 +4,10 @@ package com.netscape.cmstools;
  */
 import java.io.ByteArrayOutputStream;
 import java.io.CharConversionException;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.security.DigestException;
 import java.security.GeneralSecurityException;
 import java.security.InvalidAlgorithmParameterException;
@@ -26,7 +29,6 @@ import org.mozilla.jss.crypto.AlreadyInitializedException;
 import org.mozilla.jss.crypto.CryptoToken;
 import org.mozilla.jss.crypto.IVParameterSpec;
 import org.mozilla.jss.crypto.KeyWrapAlgorithm;
-import org.mozilla.jss.crypto.KeyWrapper;
 import org.mozilla.jss.crypto.ObjectNotFoundException;
 import org.mozilla.jss.crypto.PBEAlgorithm;
 import org.mozilla.jss.crypto.PrivateKey;
@@ -49,7 +51,7 @@ import com.netscape.cmsutil.crypto.CryptoUtil;
 
 
 
-public class TestKeyAscheel {
+public class TestEncryptionCert {
 
     private static boolean arraysEqual(byte[] bytes, byte[] ints) {
         if (bytes == null || ints == null) {
@@ -181,7 +183,7 @@ public class TestKeyAscheel {
         SymmetricKey sk = null;
 
         // Initialize Unwrap symmetric key
-        KeyWrapper source_rsaWrap = null;
+        //KeyWrapper source_rsaWrap = null;
         try {
             //val = new DerValue(wrappedKeyData);
             //in = val.data;
@@ -195,23 +197,11 @@ public class TestKeyAscheel {
             encrypted_private_key = sequence_member[1].getOctetString();
             System.out.println("Length of encrypted_private_key: " + encrypted_private_key.length);
 
-            source_rsaWrap = mSourceToken.getKeyWrapper(
+/*            source_rsaWrap = mSourceToken.getKeyWrapper(
                     KeyWrapAlgorithm.RSA);
-            source_rsaWrap.initUnwrap(desiredPrivateKey, null);
+            source_rsaWrap.initUnwrap(desiredPrivateKey, null);*/
 
-        } catch (NoSuchAlgorithmException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (TokenException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (InvalidKeyException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (InvalidAlgorithmParameterException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
+        }  catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
@@ -219,10 +209,6 @@ public class TestKeyAscheel {
         // Start unwrap
 
         try {
-            /*sk = source_rsaWrap.unwrapSymmetric(source_session,
-                    SymmetricKey.AES,
-                    SymmetricKey.Usage.UNWRAP,
-                    0);*/
 
             sk = CryptoUtil.unwrap(
                     mSourceToken,
@@ -305,13 +291,14 @@ public class TestKeyAscheel {
         PasswordConverter passConverter = new
                 PasswordConverter();
 
+        // Password that is to be set for p12 file
         String pwd = "Secret.123";
         char[] pwdChar = pwd.toCharArray();
         org.mozilla.jss.util.Password pass = new
                 org.mozilla.jss.util.Password(
                         pwdChar);
 
-        byte[] salt = Utils.base64decode("Hxt3m/xJPT1Q4DuIIYs6PS6kQhw=");
+        byte[] salt = Utils.base64decode("dqE2GtulQGl180IzcQg36ILZmCE=");
 
         ASN1Value key = null;
         try {
@@ -362,7 +349,13 @@ public class TestKeyAscheel {
                     ByteArrayOutputStream();
             pfx.encode(fos);
             // put final PKCS12 into volatile request
-            System.out.println(Utils.base64encode(fos.toByteArray(), true));
+            File file = new File("/home/dmoluguw/test/test_kra_operation/programmatically_retrieved_p12");
+            OutputStream
+            os
+            = new FileOutputStream(file);
+
+            os.write(fos.toByteArray());
+            os.close();
         } catch (DigestException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
