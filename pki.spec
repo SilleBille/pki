@@ -318,6 +318,7 @@ BuildRequires:    python3-libselinux
 BuildRequires:    python3-nss
 BuildRequires:    python3-requests >= 2.6.0
 BuildRequires:    python3-six
+BuildRequires:    python3-pytest-runner
 
 # with_python3
 %endif
@@ -635,6 +636,13 @@ Requires:         p11-kit-trust
 # PKICertImport depends on certutil and openssl
 Requires:         nss-tools
 Requires:         openssl
+
+# pki-healthcheck depends on the following library
+%if 0%{?rhel}
+Requires:         ipa-healthcheck-core
+%else
+Requires:         freeipa-healthcheck-core
+%endif
 
 %description -n   pki-tools
 This package contains PKI executables that can be used to help make
@@ -1427,6 +1435,10 @@ fi
 %{_bindir}/PrettyPrintCert
 %{_bindir}/PrettyPrintCrl
 %{_bindir}/TokenInfo
+%{_bindir}/pki-healthcheck
+%{python3_sitelib}/pkihealthcheck/
+%{python3_sitelib}/pkihealthcheck-*.egg-info/
+%{python3_sitelib}/pkihealthcheck-*-nspkg.pth
 %{_javadir}/pki/pki-tools.jar
 %{_datadir}/pki/java-tools/
 %{_datadir}/pki/lib/p11-kit-trust.so
