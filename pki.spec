@@ -1490,7 +1490,7 @@ fi
 # with_python3_default
 %endif
 
-%{_bindir}/pki-healthcheck
+%{_sbindir}/pki-healthcheck
 %{python3_sitelib}/pkihealthcheck/
 %{python3_sitelib}/pkihealthcheck-*.egg-info/
 %{python3_sitelib}/pkihealthcheck-*-nspkg.pth
