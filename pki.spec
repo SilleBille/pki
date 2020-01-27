@@ -239,6 +239,13 @@ BuildRequires:    go-md2man
 BuildRequires:    golang-github-cpuguy83-md2man
 %endif
 
+# pki-healthcheck depends on the following library
+%if 0%{?rhel}
+BuildRequires:         ipa-healthcheck-core >= 0.4-4
+%else
+BuildRequires:         freeipa-healthcheck-core >= 0.5
+%endif
+
 # PKICertImport depends on certutil and openssl
 BuildRequires:    nss-tools
 BuildRequires:    openssl
@@ -437,9 +444,9 @@ Requires:         openssl
 
 # pki-healthcheck depends on the following library
 %if 0%{?rhel}
-Requires:         ipa-healthcheck-core
+Requires:         ipa-healthcheck-core >= 0.4-4
 %else
-Requires:         freeipa-healthcheck-core
+Requires:         freeipa-healthcheck-core >= 0.5
 %endif
 
 %description -n   pki-tools
