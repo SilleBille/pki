@@ -444,6 +444,7 @@ class StatusCLI(pki.cli.CLI):
     def print_help(self):
         print('Usage: pki-server status [OPTIONS] [<instance ID>]')
         print()
+        print('  -i, --instance <instance ID>    Instance ID (default: pki-tomcat).')
         print('  -v, --verbose                 Run in verbose mode.')
         print('      --debug                   Run in debug mode.')
         print('      --help                    Show help message.')
@@ -452,8 +453,8 @@ class StatusCLI(pki.cli.CLI):
     def execute(self, argv):
 
         try:
-            opts, args = getopt.gnu_getopt(argv, 'v', [
-                'verbose', 'debug', 'help'])
+            opts, args = getopt.gnu_getopt(argv, 'i:v', [
+                'instance=', 'verbose', 'debug', 'help'])
 
         except getopt.GetoptError as e:
             logger.error(e)
@@ -462,8 +463,11 @@ class StatusCLI(pki.cli.CLI):
 
         instance_name = 'pki-tomcat'
 
-        for o, _ in opts:
-            if o in ('-v', '--verbose'):
+        for o, a in opts:
+            if o in ('-i', '--instance'):
+                instance_name = o
+
+            elif o in ('-v', '--verbose'):
                 logging.getLogger().setLevel(logging.INFO)
 
             elif o == '--debug':
