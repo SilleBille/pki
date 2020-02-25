@@ -32,7 +32,7 @@ install:
   - docker exec -i ${CONTAINER} ${SCRIPTDIR}/pki-install.sh
   
 script:
-  - >
+  - |
     if [ $TASK = "IPA" ]; then
       docker exec -i ${CONTAINER} ${SCRIPTDIR}/ipa-test.sh
     else
