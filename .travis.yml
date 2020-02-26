@@ -33,6 +33,7 @@ install:
   
 script:
   - |
+    set -e
     if [ $TASK = "IPA" ]; then
       docker exec -i ${CONTAINER} ${SCRIPTDIR}/ipa-test.sh
     else
