@@ -6,8 +6,12 @@ jobs:
   build:
     # Job name is Greeting
     name: Greeting
-    # This job runs on Linux
-    runs-on: ubuntu-latest
+    # This job runs on self-hosted machine
+    runs-on: self-hosted
     steps:
       # This step prints the time.
-      - run: echo "Hello World!!!"
+      - name: Hello world
+        run: echo "Hello World!!!"
+
+      - name: Echo time
+        run: echo 'The time is ${{ steps.hello.outputs.time }}'
