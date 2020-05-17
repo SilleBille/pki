@@ -20,7 +20,7 @@ class CSPlugin(Plugin):
 
 
 class CSRegistry(Registry):
-    def initialize(self, framework, config):
+    def initialize(self, framework, config, options=None):
         pass
 
 

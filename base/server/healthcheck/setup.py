@@ -1,6 +1,5 @@
 from setuptools import setup
 
-
 setup(
     # A hyphen ('-') gets converted to underscore ('_') while packaging
     # so avoiding the name pki-healthcheck
@@ -29,7 +28,7 @@ setup(
         ],
     },
     classifiers=[
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ],
     python_requires='!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*',
     setup_requires=['pytest-runner'],

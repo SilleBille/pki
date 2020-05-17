@@ -57,8 +57,6 @@ class DogtagCertsConfigCheck(CSPlugin):
             cert_nicknames.append('kra_storage')
             cert_nicknames.append('kra_audit_signing')
 
-        cert_nssdb = None
-
         # Run the sync check
         for cert_id in cert_nicknames:
             subsystem_name, cert_tag = PKIServer.split_cert_id(cert_id)
