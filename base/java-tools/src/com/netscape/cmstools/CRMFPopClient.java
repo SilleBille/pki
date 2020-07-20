@@ -19,10 +19,13 @@ package com.netscape.cmstools;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.net.URI;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -41,6 +44,7 @@ import org.apache.commons.cli.PosixParser;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
@@ -283,6 +287,7 @@ public class CRMFPopClient {
 
         Options options = createOptions();
         CommandLine cmd = null;
+        URL url = null;
 
         try {
             CommandLineParser parser = new PosixParser();
@@ -339,11 +344,11 @@ public class CRMFPopClient {
         String output = cmd.getOptionValue("o");
         String output_kid = output + ".keyId";
 
-        String hostPort = cmd.getOptionValue("m");
+        String host_url = cmd.getOptionValue("m");
         String username = cmd.getOptionValue("u");
         String requestor = cmd.getOptionValue("r");
 
-        if (hostPort != null) {
+        if (host_url != null) {
             if (cmd.hasOption("w")) {
                 printError("Any value specified for the key wrap parameter (-w) " +
                         "will be overriden.  CRMFPopClient will contact the " +
@@ -485,15 +490,22 @@ public class CRMFPopClient {
             String kid = CryptoUtil.encodeKeyID(id);
             System.out.println("Keypair private key id: " + kid);
 
-            if ((transportCert != null) && (hostPort != null)) {
+            if ((transportCert != null) && (host_url != null)) {
                 // check the CA for the required key wrap algorithm
                 // if found, override whatever has been set by the command line
                 // options for the key wrap algorithm
 
                 ClientConfig config = new ClientConfig();
-                String host = hostPort.substring(0, hostPort.indexOf(':'));
-                int port = Integer.parseInt(hostPort.substring(hostPort.indexOf(':')+1));
-                config.setServerURL("http", host, port);
+
+                // check if the URL carries protocol: http or https
+                if(!host_url.startsWith("http"))
+                    host_url = "http://" + host_url;
+
+                url = new URL(host_url);
+                int port = url.getPort();
+                if(port < 0) port = url.getDefaultPort();
+                config.setServerURL(url.getProtocol(), url.getHost(), port);
+                config.setNSSDatabase(new File(databaseDir).getAbsolutePath());
 
                 PKIClient pkiclient = new PKIClient(config);
                 kwAlg = getKeyWrapAlgotihm(pkiclient);
@@ -547,11 +559,11 @@ public class CRMFPopClient {
             }
             String csr = sw.toString();
 
-            if (hostPort != null) {
-                System.out.println("Submitting CRMF request to " + hostPort);
+            if (url != null) {
+                System.out.println("Submitting CRMF request to " + url.toString());
                 client.submitRequest(
                         request,
-                        hostPort,
+                        url,
                         username,
                         profileID,
                         requestor);
@@ -834,33 +846,41 @@ public class CRMFPopClient {
 
     public void submitRequest(
             String request,
-            String hostPort,
+            URL url,
             String username,
             String profileID,
             String requestor) throws Exception {
 
-        String url = "http://" + hostPort + "/ca/ee/ca/profileSubmit"
-                + "?cert_request_type=crmf"
-                + "&cert_request=" + URLEncoder.encode(request, "UTF-8")
-                + "&renewal=false"
-                + "&xmlOutput=false"
-                + "&profileId=" + URLEncoder.encode(profileID, "UTF-8")
-                + "&SubId=profile";
+        URIBuilder builder = new URIBuilder();
+        builder.setHost(url.getHost());
+        builder.setPort(url.getPort());
+        builder.setScheme(url.getProtocol());
+
+        builder.setPath("/ca/ee/ca/profileSubmit");
+
+        builder.addParameter("cert_request_type", "crmf");
+        builder.addParameter("cert_request", URLEncoder.encode(request, "UTF-8"));
+        builder.addParameter("renewal", "false");
+        builder.addParameter("xmlOutput", "false");
+        builder.addParameter("profileId", URLEncoder.encode(profileID, "UTF-8"));
+        builder.addParameter("SubId", "profile");
 
         if (username != null) {
-            url += "&uid=" + URLEncoder.encode(username, "UTF-8");
-            url += "&sn_uid=" + URLEncoder.encode(username, "UTF-8");
+            builder.addParameter("uid", URLEncoder.encode(username, "UTF-8"));
+            builder.addParameter("sn_uid", URLEncoder.encode(username, "UTF-8"));
         }
 
         if (requestor != null) {
-            url += "&requestor_name=" + URLEncoder.encode(requestor, "UTF-8");
+            builder.addParameter("requestor_name", URLEncoder.encode(requestor, "UTF-8"));
         }
+        URI connectionUrl = builder.build();
 
-        if (verbose) System.out.println("Opening " + url);
+        if (verbose) System.out.println("Opening " + connectionUrl.toString());
 
         try (CloseableHttpClient client = HttpClientBuilder.create().build()) {
 
-            HttpGet method = new HttpGet(url);
+
+            HttpGet method = new HttpGet(connectionUrl);
             HttpResponse response = client.execute(method);
 
             if (response.getStatusLine().getStatusCode() != 200) {
