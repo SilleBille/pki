@@ -47,3 +47,4 @@ docker ps -a
 sleep 5
 
 docker exec -i ${CONTAINER} dnf update -y
+docker exec -i ${CONTAINER} systemctl restart sshd
